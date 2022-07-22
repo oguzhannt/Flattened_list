@@ -1,0 +1,11 @@
+mylist = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+newlist = []
+def f(x):
+    for i in x:
+      if type(i)==list:
+            f(i)
+      else:
+            newlist.append(i)
+
+f(mylist)
+print(newlist)
